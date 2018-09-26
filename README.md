@@ -12,3 +12,19 @@ b. Find out top 3 reasons for having more crime in a city.
 c. Which all attributes have correlation with crime rate? 
 
 Ans 1 a. - >
+
+library(mlbench)
+
+library(caret)
+
+data(Yeast)
+
+correlationMatrix <- cor(Yeast[,1:5])
+
+print(correlationMatrix)
+
+highlyCorrelated <- findCorrelation(correlationMatrix, cutoff=5)
+
+print(highlyCorrelated)
+
+Ans 1 b. ->
